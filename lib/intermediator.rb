@@ -1,8 +1,8 @@
-% cat lib/intermediator.rb
-class Intermediator
+require 'translator'
 
-  def self.output
-    puts "test"
+class Intermediator
+  def self.output(language = "english")
+    translator = Translator.new(language)
+    translator.output
   end
-  
 end
